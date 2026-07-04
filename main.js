@@ -20,7 +20,7 @@ function makePage(data) {
   setData('day2', dateFormat(data.daily.time[2]));
   setData('weathercode0', getWMO(data.daily.weathercode[0]));
   setData('weathercode1', getWMO(data.daily.weathercode[1]));
-   setData('weathercode2', getWMO(data.daily.weathercode[2]));
+  setData('weathercode2', getWMO(data.daily.weathercode[2]));
   setData('temperature_2m_max0', data.daily.temperature_2m_max[0] + '℃');
   setData('temperature_2m_max1', data.daily.temperature_2m_max[1] + '℃');
   setData('temperature_2m_max2', data.daily.temperature_2m_max[2] + '℃');
