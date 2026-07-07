@@ -57,6 +57,20 @@ function dateFormat(date, mode) {
 
 function addZero(n) { return n < 10 ? '0' + n : n; }
 
+// 1秒ごとに時計を更新する
+function updateClock() {
+  setData('time', dateFormat(new Date(), 1));
+}
+
+setInterval(updateClock, 1000); // 1000ミリ秒 = 1秒
+
+// ページ読み込み時に1回取得
+getData();
+
+// 1時間ごとに再取得
+setInterval(getData, 1000 * 60 * 60);
+
+
 function getWMO(w) {
   if (w == 0) return '☀️';
   if (w == 1) return '🌤';
